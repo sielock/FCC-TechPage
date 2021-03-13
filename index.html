@@ -7,13 +7,12 @@
     </head>
     <body>
         <nav id="navbar">
-            <header class="topic"></header>
-            <a class="nav-link"></a>
+            <header class="topic">Basic Python Documentation</header>
         </nav>
         
         <main id="main-doc">
             <section class="main-section">
-                <header class="topic">Introduction</header>
+                <header class="topic">Basic Introduction</header>
                 <section id="">
                     <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach 
                         to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language 
@@ -146,11 +145,49 @@
             </section>
         </main>
         <script>
-            var sections = document.querySelectorAll(".main-section");
-            for(let i=0; i<sections.length; i++) {
-                var sectId = sections[i].children[0].innerText.replace(/\s/g, "_");
-                sections[i].children[1].id = sectId;
+            const contentSection = document.querySelectorAll(".main-section")
+            const navigation = document.getElementById('navbar')
+
+            const setSectionId = (section) => {
+                let content = section.children[1]
+                content.id = createSectionId(section)
             }
+
+            const createSectionId = (section) => {
+               return section.children[0].innerText.replace(/\s/g, "_") 
+            }
+
+            const populateNav = (textContent, href) => {
+                let link = document.createElement("a")
+                link.classList.add("nav-link")
+                link.href = "#"+href
+                link.innerText = textContent
+                return link
+            }
+
+            const createNavUl = (items) => {
+                const ul = document.createElement('ul');
+                let li, a;
+                for (let item of items) {
+                    li = document.createElement('li')
+                    //restructures item in second argument of populateNav() to correlate with the format of the id in these sections
+                    a = populateNav(item, item.replace(/\s/g, "_"))
+                    li.append(a)
+                    ul.append(li)
+                }
+                return ul
+            }
+
+            //populate the section id's with the content of their respective headers
+            contentSection.forEach(elem => setSectionId(elem))
+
+            //Populate navbar with links to each section
+            var linkTitles = []
+            contentSection.forEach(elem => linkTitles.push(elem.children[0].innerText))
+
+            const ul = createNavUl(linkTitles)
+            navigation.append(ul)
+            
         </script>
     </body>
 </html> 
