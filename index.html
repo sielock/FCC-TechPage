@@ -145,24 +145,24 @@
             </section>
         </main>
         <script>
-            const contentSection = document.querySelectorAll(".main-section")
-            const navigation = document.getElementById('navbar')
+            const contentSection = document.querySelectorAll(".main-section");
+            const navigation = document.getElementById('navbar');
 
             const setSectionId = (section) => {
                 let content = section.children[1]
-                content.id = createSectionId(section)
+                content.id = createSectionId(section);
             }
 
             const createSectionId = (section) => {
-               return section.children[0].innerText.replace(/\s/g, "_") 
+               return section.children[0].innerText.replace(/\s/g, "_") ;
             }
 
             const populateNav = (textContent, href) => {
-                let link = document.createElement("a")
-                link.classList.add("nav-link")
-                link.href = "#"+href
-                link.innerText = textContent
-                return link
+                let link = document.createElement("a");
+                link.classList.add("nav-link");
+                link.href = "#"+href;
+                link.innerText = textContent;
+                return link;
             }
 
             const createNavUl = (items) => {
@@ -171,23 +171,22 @@
                 for (let item of items) {
                     li = document.createElement('li')
                     //restructures item in second argument of populateNav() to correlate with the format of the id in these sections
-                    a = populateNav(item, item.replace(/\s/g, "_"))
-                    li.append(a)
-                    ul.append(li)
+                    a = populateNav(item, item.replace(/\s/g, "_"));
+                    li.append(a);
+                    ul.append(li);
                 }
-                return ul
+                return ul;
             }
 
             //populate the section id's with the content of their respective headers
-            contentSection.forEach(elem => setSectionId(elem))
+            contentSection.forEach(elem => setSectionId(elem));
 
             //Populate navbar with links to each section
             var linkTitles = []
-            contentSection.forEach(elem => linkTitles.push(elem.children[0].innerText))
+            contentSection.forEach(elem => linkTitles.push(elem.children[0].innerText));
 
-            const ul = createNavUl(linkTitles)
-            navigation.append(ul)
-            
+            const ul = createNavUl(linkTitles);
+            navigation.append(ul);
         </script>
     </body>
 </html> 
