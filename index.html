@@ -75,7 +75,7 @@
                             </ul>
                     </ul>
                     <p>Lists operate similarly to arrays in other languages, and Dictionaries are similar to associatve arrays in other languages (uses same key/value pair mapping).
-                        There are other data types such as sets and ranges, but these are less commonly seen, especially for new learners.
+                        There are other data types, such as sets and ranges, but these are less commonly seen especially for new learners.
                     </p>
                 </section>
 
@@ -145,5 +145,12 @@
                 </section>
             </section>
         </main>
+        <script>
+            var sections = document.querySelectorAll(".main-section");
+            for(let i=0; i<sections.length; i++) {
+                var sectId = sections[i].children[0].innerText.replace(/\s/g, "_");
+                sections[i].children[1].id = sectId;
+            }
+        </script>
     </body>
 </html> 
