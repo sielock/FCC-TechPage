@@ -1,9 +1,149 @@
 <html lang="en">
     <head>
         <title>Technical Documentation</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-</html>
+    <body>
+        <nav id="navbar">
+            <header class="topic"></header>
+            <a class="nav-link"></a>
+        </nav>
+        
+        <main id="main-doc">
+            <section class="main-section">
+                <header class="topic">Introduction</header>
+                <section id="">
+                    <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach 
+                        to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language 
+                        for scripting and rapid application development in many areas on most platforms. Unlike most languages, Python relies on whitespace to indicate scope
+                        and omits the use of semicolons at the end of statements. 
+                    <p>
+                        Python also includes a massive number of standard and external libraries that can be leveraged in your projects. Some of the most common ones are:
+                    </p>
+                    <ul>
+                        <li><a href="https://numpy.org/">Numpy</a> - used for scientific computing</li>
+                        <li><a href="https://matplotlib.org/">Matplotlib</a> -  used for visualization</li>
+                        <li><a href="https://docs.python.org/3/library/">The Standard Library</a> - the libraries installed with Python by default.</li>
+                    </ul>
+                    <p>Fun fact: Python was named after the British comedy group Monty Python, and the documentation features references to famous acts, such as the "Spam and Eggs" sketch.
+                    </p></p>
+                </section>
+            </section>
+
+            <section class="main-section">
+                <header class="topic">Popular Uses</header>
+                <section id="">
+                    <p>As you might expect, Pyton has a wide variety of applications. Here are some of the most common uses you might see:</p>
+                    <ul>
+                        <li>Web Development: Python has libraries such as Django, Flask and BeautifulSoup which make certain aspects of web development easy to setup and work with.</li>
+                        <li>Scientific Applications: Numpy, Pandas and SciPy are just a few of the libraries that can be used in complex scientific and numeric computation.</li>
+                        <li>Teaching Programming: Due to the simple, high-level syntax and data structures native to Python, it is a great language to introduce programming concepts to
+                            people new to coding.
+                        </li>
+                    </ul>
+                </section>
+
+            </section><section class="main-section">
+                <header class="topic">Data Structures</header>
+                <section id="">
+                    <p>Python uses many similar data types as other languages, while including a few unique ones of its own. Some of the most common are:</p>
+                    <ul>
+                        <li>Text Type:</li>
+                            <ul>
+                                <li>String <code>str</code></li>
+                            </ul>
+                        <li>Numeric Types:</li>
+                            <ul>
+                                <li>Integer - <code>int</code></li>
+                                <li>Floating Point - <code>float</code></li>
+                                <li>Complex - <code>complex</code></li>
+                            </ul>
+                        <li>Sequence Types:</li>
+                            <ul>
+                                <li>List - <code>list</code></li>
+                                <li>Tuple - <code>tuple</code></li>
+                            </ul>
+                        <li>Mapping Type:</li>
+                            <ul>
+                                <li>Dictionary - <code>dict</code></li>
+                            </ul>
+                        <li>Boolean Types:</li>
+                            <ul>
+                                <li>bool</li>
+                            </ul>
+                    </ul>
+                    <p>Lists operate similarly to arrays in other languages, and Dictionaries are similar to associatve arrays in other languages (uses same key/value pair mapping).
+                        There are other data types such as sets and ranges, but these are less commonly seen, especially for new learners.
+                    </p>
+                </section>
+
+            </section><section class="main-section">
+                <header class="topic">Flow Control</header>
+                <section id="">
+                    <p>The most common forms of flow control you will encounter are if statements, for statements, and while statements.</p>
+                    <h1>If Statement</h1>
+                        <p>The <code>if</code> statement is used for conditional execution. It follows the if/else if pattern of other languages to evaluate multiple conditions. Python's
+                            syntax differs in that it uses <code>elif</code> instead of <code>else</code>. This if/elif sequence is used in place of a <code>switch</code> statement,
+                            as Python does not have the <code>switch</code> statment functionality other languages do.</p>
+                        <code>
+                            x = int(input("Please enter an integer: "))
+                            if x < 0:
+                                x = 0
+                                print('Negative changed to zero')
+                            elif x == 0:
+                                print('Zero')
+                            elif x == 1:
+                                print('Single')
+                            else:
+                                print('More')
+                        </code>
+                    <h1>For Statement</h1>
+                        <p>The <code>for</code> statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object. Unlike most 
+                        other languages, Python iterates over the items of any sequence in the order that they appear in the sequence. There is no need to set an iterator and halting condition:
+                        </p>
+                        <code>
+                            words = ['cat', 'window', 'defenestrate']
+                            for w in words:
+                                print(w)
+                        </code>
+                        <p>This code will iterate through the words list, and print out each value in the order that they appear.</p>
+                    <h1>While Statement</h1>
+                    <p>The <code>while</code> statement is used for repeated execution as long as an expression is true:</p>
+                    <code>
+                        a = 0
+                        while a < 10:
+                            print(a)
+                            a = a + 1
+                    </code>
+                    <p>This code will print the value of a, so long as the expression <code>a < 10</code> remains true. Once the expression returns false, then the code will stop running.
+                        If there is an else clause present, the code within it will be executed upon the expression returning false.</p>
+                </section>
+
+            </section><section class="main-section">
+                <header class="topic">Hello World</header>
+                <section id="">
+                    <p>To write your first bits of Python code, you don't need an IDE. Python can be written and executed using the Python interpreter, which runs from the command line.
+                        After installing the latest version of Python (at the time of writing, this is Python 3.9), open your Command Prompt (Windows) or Terminal (Unix) and type: 
+                        <br><code>python3.9</code>
+                        This will start the interpreter in interactive mode. From here, type: 
+                    </p>
+                    <code>
+                        def helloWorld():
+                            helloString = "Hello World!"
+                            print(helloString)
+                    </code>
+                        <p>Hit the Enter key twice and you have defined your first function! In order to see it work, type <code>helloWorld()</code> into the console and press enter!</p>
+                </section>
+            </section>
+
+            </section><section class="main-section">
+                <header class="topic">Reference</header>
+                <section id="">
+                    <p>The documentation on this page is taken from <a href="https://docs.python.org/3/">here</a>, where go much deeper into the language of Python.</p>
+                </section>
+            </section>
+        </main>
+    </body>
+</html> 
