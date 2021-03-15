@@ -52,7 +52,7 @@
                     <ul>
                         <li>Text Type:</li>
                             <ul>
-                                <li>String <code>str</code></li>
+                                <li>String - <code>str</code></li>
                             </ul>
                         <li>Numeric Types:</li>
                             <ul>
@@ -71,7 +71,7 @@
                             </ul>
                         <li>Boolean Types:</li>
                             <ul>
-                                <li>bool</li>
+                                <li>Boolean - <code>bool</code></li>
                             </ul>
                     </ul>
                     <p>Lists operate similarly to arrays in other languages, and Dictionaries are similar to associatve arrays in other languages (uses same key/value pair mapping).
@@ -88,36 +88,30 @@
                         <p>The <code>if</code> statement is used for conditional execution. It follows the if/else if pattern of other languages to evaluate multiple conditions. Python's
                             syntax differs in that it uses <code>elif</code> instead of <code>else</code>. This if/elif sequence is used in place of a <code>switch</code> statement,
                             as Python does not have the <code>switch</code> statment functionality other languages do.</p>
-                        <code>
-                            x = int(input("Please enter an integer: "))
-                            if x < 0:
-                                x = 0
-                                print('Negative changed to zero')
-                            elif x == 0:
-                                print('Zero')
-                            elif x == 1:
-                                print('Single')
-                            else:
-                                print('More')
-                        </code>
+                        <code>      x = int(input("Please enter an integer: ")) 
+        if x < 0:
+            x = 0
+            print('Negative changed to zero')
+        elif x == 0:
+            print('Zero')
+        elif x == 1:
+            print('Single')
+        else:
+            print('More')</code>
                     <h1>For Statement</h1>
                         <p>The <code>for</code> statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object. Unlike most 
                         other languages, Python iterates over the items of any sequence in the order that they appear in the sequence. There is no need to set an iterator and halting condition:
                         </p>
-                        <code>
-                            words = ['cat', 'window', 'defenestrate']
-                            for w in words:
-                                print(w)
-                        </code>
+                        <code>      words = ['cat', 'window', 'defenestrate']     
+        for w in words:
+            print(w)</code>
                         <p>This code will iterate through the words list, and print out each value in the order that they appear.</p>
                     <h1>While Statement</h1>
                     <p>The <code>while</code> statement is used for repeated execution as long as an expression is true:</p>
-                    <code>
-                        a = 0
-                        while a < 10:
-                            print(a)
-                            a = a + 1
-                    </code>
+                    <code>      a = 0
+      while a < 10:      
+        print(a)
+        a = a + 1</code>
                     <p>This code will print the value of a, so long as the expression <code>a < 10</code> remains true. Once the expression returns false, then the code will stop running.
                         If there is an else clause present, the code within it will be executed upon the expression returning false.</p>
                 </section>
@@ -128,14 +122,12 @@
                 <section>
                     <p>To write your first bits of Python code, you don't need an IDE. Python can be written and executed using the Python interpreter, which runs from the command line.
                         After installing the latest version of Python (at the time of writing, this is Python 3.9), open your Command Prompt (Windows) or Terminal (Unix) and type: 
-                        <br><code>python3.9</code>
+<code>python3.9</code>
                         This will start the interpreter in interactive mode. From here, type: 
                     </p>
-                    <code>
-                        def helloWorld():
-                            helloString = "Hello World!"
-                            print(helloString)
-                    </code>
+                    <code>      def helloWorld():
+        helloString = "Hello World!"    
+        print(helloString)</code>
                         <p>Hit the Enter key twice and you have defined your first function! In order to see it work, type <code>helloWorld()</code> into the console and press enter!</p>
                 </section>
             </section>
