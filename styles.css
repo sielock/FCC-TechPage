@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    min-width: 300px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
@@ -9,14 +9,15 @@ code {
     color: red;
     white-space: pre-wrap;
     background: #f7f7f7;
+    position: relative;
 }
 
 #navbar {
     position: fixed;
+    top: 0;
     left: 0;
     height: 100%;
     border-right: 2px solid black;
-    padding-right: 10px;
     width: 300px;
 }
 
@@ -31,6 +32,7 @@ code {
     padding: 0;
     overflow-y: auto;
     overflow-x: hidden;
+    height: 88%;
 }
 
 #navbar li {
@@ -38,14 +40,13 @@ code {
     list-style: none;
     position: relative;
     width: 100%;
-    font-size: 1.1em;
-    padding: 10px;
 }
 
 .nav-link {
     text-decoration: none;
     color: black;
-    margin: 10px;
+    padding: 10px 30px;
+    display: block;
 }
 
 .nav-link:hover {
@@ -56,6 +57,7 @@ code {
     position: absolute;
     left: 310px;
     padding: 20px;
+    margin-bottom: 100px;
 }
 
 #main-doc header {
@@ -70,45 +72,37 @@ code {
     padding-top: 10px;
 }
 
-.main-section section {
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 1.1em;
+section article {
+    margin: 10px;
 }
 
 @media only screen and (max-width: 815px) {
-
-    #main-doc {
-        position: relative;
-        width: 100%;
-        margin-left: 0px;
-        margin-top: 270px;
-        left: 0;
-        padding: 20px
-    }
-
-    #main-doc section {
-        padding: 0px;
-    }
-
     #navbar {
         position: absolute;
         top: 0;
         padding: 0;
         margin: 0;
         width: 100%;
-        text-align: center;
-        height: fit-content;
-        border-right: none;
+        border: none;
         max-height: 270px;
     }
 
+
     #navbar ul {
-        height: 200px;
+        height: 180px;
         border: 1px solid black;
     }
 
-    #navbar li {
-        text-align: center;
+    #main-doc {
+        position: relative;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 300px;
+        left: 0;
     }
+
+    #article {
+        padding: 0px;
+    }
+
 }
