@@ -154,7 +154,7 @@
 
             const setSectionId = (section) => {
                 let headerContent = section.children[0]
-                section.id = headerContent.innerText.replace(/\s/g, "_");
+                return headerContent.innerText.replace(/\s/g, "_");
             }
 
             const populateNav = (textContent) => {
@@ -179,7 +179,7 @@
             }
 
             //populate the section id's with the formatted text of their respective headers
-            contentSection.forEach(elem => setSectionId(elem));
+            contentSection.forEach(elem => elem.id = setSectionId(elem));
 
             //create nav
             const ul = createNavUl(contentSection);
