@@ -50,29 +50,23 @@
                 <article>
                     <p>Python uses many similar data types as other languages, while including a few unique ones of its own. Some of the most common are:</p>
                     <ul>
-                        <li>Text Type:</li>
+                        <li>Text/Strings</li>
+                        <li>Numeric Types</li>
                             <ul>
-                                <li>String - <code>str</code></li>
+                                <li>Integer</li>
+                                <li>Floating Point</li>
+                                <li>Complex</li>
                             </ul>
-                        <li>Numeric Types:</li>
+                        <li>Sequence Types</li>
                             <ul>
-                                <li>Integer - <code>int</code></li>
-                                <li>Floating Point - <code>float</code></li>
-                                <li>Complex - <code>complex</code></li>
+                                <li>List</li>
+                                <li>Tuple</li>
                             </ul>
-                        <li>Sequence Types:</li>
+                        <li>Mapping Type</li>
                             <ul>
-                                <li>List - <code>list</code></li>
-                                <li>Tuple - <code>tuple</code></li>
+                                <li>Dictionary</li>
                             </ul>
-                        <li>Mapping Type:</li>
-                            <ul>
-                                <li>Dictionary - <code>dict</code></li>
-                            </ul>
-                        <li>Boolean Types:</li>
-                            <ul>
-                                <li>Boolean - <code>bool</code></li>
-                            </ul>
+                        <li>Boolean (true/false)</li>
                     </ul>
                     <p>Lists operate similarly to arrays in other languages, and Dictionaries are similar to associatve arrays in other languages (uses same key/value pair mapping).
                         There are other data types, such as sets and ranges, but these are less commonly seen especially for new learners.
@@ -83,37 +77,53 @@
             <section class="main-section">
                 <header class="topic">Flow Control</header>
                 <article>
-                    <p>The most common forms of flow control you will encounter are if statements, for statements, and while statements.</p>
+                    <p>The most common forms of flow control you will encounter are <code>if</code> statements, <code>for</code> statements, and <code>while</code> statements.</p>
                     <h1>If Statement</h1>
-                        <p>The <code>if</code> statement is used for conditional execution. It follows the if/else if pattern of other languages to evaluate multiple conditions. Python's
-                            syntax differs in that it uses <code>elif</code> instead of <code>else</code>. This if/elif sequence is used in place of a <code>switch</code> statement,
-                            as Python does not have the <code>switch</code> statment functionality other languages do.</p>
-                        <code>      x = int(input("Please enter an integer: ")) 
-        if x < 0:
-            x = 0
-            print('Negative changed to zero')
-        elif x == 0:
-            print('Zero')
-        elif x == 1:
-            print('Single')
-        else:
-            print('More')</code>
+                        <p>The <code>if</code> statement is used for conditional execution. It uses the <code>if...else if...else</code> pattern like most other languages to evaluate 
+                            multiple conditions. Python's syntax differs in that it uses <code>elif</code> instead of <code>else if</code>. The <code>if...elif...else</code> sequence is 
+                            used in place of a <code>switch</code> statement, as Python does not have <code>switch</code> statment functionality that languages like JavaScript do.</p>
+<pre><code class="codeblock">
+x = int(input("Please enter an integer: ")) 
+if x < 0:
+    x = 0
+    print('Negative changed to zero')
+elif x == 0:
+    print('Zero')
+elif x == 1:
+    print('Single')
+else:
+    print('More')
+
+</code></pre>
                     <h1>For Statement</h1>
                         <p>The <code>for</code> statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object. Unlike most 
                         other languages, Python iterates over the items of any sequence in the order that they appear in the sequence. There is no need to set an iterator and halting condition:
                         </p>
-                        <code>      words = ['cat', 'window', 'defenestrate']     
-        for w in words:
-            print(w)</code>
+<pre><code class="codeblock">
+words = ['cat', 'window', 'defenestrate']     
+for w in words:
+    print(w)
+
+</code></pre>
                         <p>This code will iterate through the words list, and print out each value in the order that they appear.</p>
                     <h1>While Statement</h1>
-                    <p>The <code>while</code> statement is used for repeated execution as long as an expression is true:</p>
-                    <code>      a = 0
-      while a < 10:      
-        print(a)
-        a = a + 1</code>
-                    <p>This code will print the value of a, so long as the expression <code>a < 10</code> remains true. Once the expression returns false, then the code will stop running.
-                        If there is an else clause present, the code within it will be executed upon the expression returning false.</p>
+                    <p>The while statement is used for repeated execution as long as an expression is true.</p>
+<pre><code class="codeblock">
+while (expression):
+    statement
+
+</code></pre>
+                    <p>The statement code will run so long as the expression remains true. Once the expression 
+                        becomes false, then the code will stop, and if there is an else clause present the code within it will be executed.</p>
+                    <p>Example:</p>
+<pre><code class="codeblock">
+a = 0
+while a < 10:
+    print(a)
+    a = a + 1
+
+</code></pre>
+                    <p>The example code will print the numbers 0 through 9 in the console, and will stop executing once the value of <em>a</em> reaches 10.</p>
                 </article>
             </section>
             
@@ -122,12 +132,18 @@
                 <article>
                     <p>To write your first bits of Python code, you don't need an IDE. Python can be written and executed using the Python interpreter, which runs from the command line.
                         After installing the latest version of Python (at the time of writing, this is Python 3.9), open your Command Prompt (Windows) or Terminal (Unix) and type: 
-<code>python3.9</code>
+<pre><code class="codeblock">
+python3.9
+
+</code></pre>
                         This will start the interpreter in interactive mode. From here, type: 
                     </p>
-                    <code>      def helloWorld():
-        helloString = "Hello World!"    
-        print(helloString)</code>
+<pre><code class="codeblock">
+def helloWorld():
+    helloString = "Hello World!"    
+    print(helloString)
+
+</code></pre>
                         <p>Hit the Enter key twice and you have defined your first function! In order to see it work, type <code>helloWorld()</code> into the console and press enter!</p>
                 </article>
             </section>

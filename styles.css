@@ -5,11 +5,14 @@ body {
 }
 
 code {
-    display: inline-block;
-    color: red;
-    white-space: pre-wrap;
+    color: #5e5b5b;
     background: #f7f7f7;
+}
+
+.codeblock {
+    display: block;
     position: relative;
+    text-align: left;
 }
 
 #navbar {
@@ -102,5 +105,15 @@ section article {
 
     #article {
         padding: 0px;
+    }
+
+    @media only screen and (max-width: 425px) {
+        .codeblock{
+            white-space: pre-wrap;
+            margin-left: -10px;
+            width: 100%;
+            padding: 15px;
+            min-width: 200px;
+        }
     }
 }
